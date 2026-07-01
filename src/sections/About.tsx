@@ -15,8 +15,13 @@ const About = () => {
     "HTML5",
     "CSS3",
     "JavaScript (ES6+)",
-    "Responsive Design",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Framer Motion",
     "Git & GitHub",
+    "Vite",
+    "MySQL",
   ];
 
   const achievements = [

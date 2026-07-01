@@ -6,13 +6,22 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Pig Game",
+      title: "TypeRush",
       description:
-        "An engaging dice game featuring dynamic DOM manipulation, game state management, and smooth animations. Built to demonstrate interactive JavaScript capabilities.",
-      tags: ["HTML", "CSS", "JavaScript"],
-      color: "from-purple-500 to-pink-500",
-      live: "https://mahmoud-codeee.github.io/pig-game/",
-      github: "https://github.com/mahmoud-codeee/pig-game",
+        "A real-time typing speed test built in React — featuring live WPM/accuracy calculations, custom sound effects via the Web Audio API, animated UI with Framer Motion, and seamless mobile keyboard support. Shipped to GitHub Pages with zero dependencies on audio libraries.",
+      tags: ["React", "Tailwind CSS", "Framer Motion", "Vite", "Web Audio API"],
+      color: "from-emerald-500 to-teal-500",
+      live: "https://mahmoud-codeee.github.io/typerush/",
+      github: "https://github.com/mahmoud-codeee/typerush",
+    },
+    {
+      title: "Personal Portfolio",
+      description:
+        "A modern, fully responsive portfolio website built with React, TypeScript, Vite, and Tailwind CSS. Features animated UI with Framer Motion, smooth scroll sections, and a clean black & gold design aesthetic.",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
+      color: "from-amber-500 to-orange-500",
+      live: "https://mahmoud-codeee.github.io/my-portfolio/",
+      github: "https://github.com/mahmoud-codeee/my-portfolio",
     },
     {
       title: "Task Manager",
@@ -24,11 +33,20 @@ const Projects = () => {
       github: "https://github.com/mahmoud-codeee/task-manager-soft-ui",
     },
     {
+      title: "Pig Game",
+      description:
+        "An engaging dice game featuring dynamic DOM manipulation, game state management, and smooth animations. Built to demonstrate interactive JavaScript capabilities.",
+      tags: ["HTML", "CSS", "JavaScript"],
+      color: "from-purple-500 to-pink-500",
+      live: "https://mahmoud-codeee.github.io/pig-game/",
+      github: "https://github.com/mahmoud-codeee/pig-game",
+    },
+    {
       title: "Guess My Number",
       description:
         "Interactive number guessing game with score tracking, high score persistence, and real-time feedback mechanisms.",
       tags: ["HTML", "CSS", "JavaScript"],
-      color: "from-amber-500 to-orange-500",
+      color: "from-rose-500 to-red-500",
       live: "https://mahmoud-codeee.github.io/guess-my-number/",
       github: "https://github.com/mahmoud-codeee/guess-my-number",
     },
