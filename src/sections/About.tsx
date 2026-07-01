@@ -112,24 +112,22 @@ const About = () => {
         >
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12">
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-6">
-              I'm a{" "}
-              <span className="text-amber-400 font-semibold">
-                Front-End Developer
-              </span>{" "}
-              and{" "}
               <span className="text-amber-400 font-semibold">
                 Software Engineering graduate
               </span>{" "}
-              from Muscat College (UMPSA), based in Muscat, Oman — ranked 1st
-              in my cohort with a 3.9/4.0 GPA.
+              (GPA 3.9, Dean's List) and self-driven{" "}
+              <span className="text-amber-400 font-semibold">
+                Front-End Developer
+              </span>{" "}
+              with a proven track record of shipping real, deployed web
+              applications.
             </p>
             <p className="text-lg text-white/70 leading-relaxed">
-              I specialise in building polished, performant web interfaces using
-              React, TypeScript, and Tailwind CSS. I care deeply about clean
-              architecture, smooth user experiences, and writing code that
-              scales. My drive comes from curiosity — I'm always learning,
-              whether that's mastering a new framework or refining pixel-perfect
-              designs.
+              Skilled in HTML5, CSS3, modern JavaScript (ES6+), React,
+              TypeScript, and Tailwind CSS — with three live projects on GitHub
+              Pages demonstrating clean component architecture, responsive
+              design, and strong attention to UI detail. Passionate about
+              writing maintainable code and building things that actually work.
             </p>
           </div>
         </motion.div>
