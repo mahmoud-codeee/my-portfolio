@@ -27,13 +27,16 @@
 
 - ⚡ **Blazing fast** — Vite build with code splitting and tree-shaking
 - 🎭 **60fps animations** — Framer Motion scroll, hover, and entrance effects throughout
+- 🌌 **Aurora background** — Fluid, animated gradient orbs in the hero section
+- 🔤 **Split text reveal** — Name and section headers animate letter by letter on load/scroll
+- 🔢 **Animated counters** — GPA counts up from 0 on page load
+- 🧲 **Magnet buttons** — CTA buttons physically attract to the cursor on hover
+- 💡 **Spotlight cards** — Project cards show a colored light that follows the mouse
 - 🌑 **Dark theme** — Consistent black + amber/orange design language
 - 📱 **Fully responsive** — Mobile-first, works on every screen size
 - 🖱️ **3D card tilt** — Project cards respond to mouse movement in real time
-- 🔢 **Rotating roles** — Animated type-switch between job titles in the hero
 - 🧩 **Modular sections** — Each section is its own isolated component
 - ♿ **Accessible** — Semantic HTML, `aria-live` regions, `aria-label` attributes
-- 🗂️ **Clean architecture** — No prop drilling, no global state, dead-simple file structure
 
 ---
 
@@ -51,13 +54,27 @@
 
 ---
 
+## 🎨 Custom UI Components
+
+Hand-built interactive components inspired by [React Bits](https://reactbits.dev/), implemented with Framer Motion:
+
+| Component | Effect |
+|---|---|
+| `Aurora` | Animated floating gradient blobs used as the hero background |
+| `SplitText` | Splits text into characters and animates each one individually |
+| `CountUp` | Smoothly counts a number from 0 to a target value on scroll into view |
+| `Magnet` | Wraps any element and pulls it toward the cursor within a set radius |
+| `SpotlightCard` | Tracks the mouse and renders a radial light effect inside the card |
+
+---
+
 ## 📄 Sections
 
 | Section | Description |
 |---|---|
-| **Hero** | Name, animated role switcher, GPA/rank stats, CTA buttons |
+| **Hero** | Aurora background, split-text name, CountUp GPA, Magnet CTA buttons |
 | **About** | Bio from CV, achievement cards, 5-column Tech Stack grid |
-| **Projects** | 3D tilt cards with live demo + GitHub links for each project |
+| **Projects** | SpotlightCard + 3D tilt cards with live demo + GitHub links |
 | **Certificates** | Certificate gallery with modal zoom view, show more/less |
 | **Contact** | Contact form with email + social links |
 
@@ -94,6 +111,12 @@ my-portfolio/
 │   └── grad-3.jpeg
 ├── src/
 │   ├── components/
+│   │   ├── reactbits/              # Custom interactive UI components
+│   │   │   ├── Aurora.tsx
+│   │   │   ├── SplitText.tsx
+│   │   │   ├── CountUp.tsx
+│   │   │   ├── Magnet.tsx
+│   │   │   └── SpotlightCard.tsx
 │   │   ├── Navbar.tsx
 │   │   └── Footer.tsx
 │   ├── sections/
