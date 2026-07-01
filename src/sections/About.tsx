@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import SplitText from "../components/reactbits/SplitText";
 
 const About = () => {
   const ref = useRef(null);
@@ -83,16 +84,15 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <motion.h2
-            className="text-5xl md:text-7xl font-bold mb-6"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-          >
-            <span className="bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
-              About Me
-            </span>
-          </motion.h2>
+          <SplitText
+            text="About Me"
+            tag="h2"
+            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent justify-center"
+            charDelay={0.05}
+            duration={0.7}
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+          />
           <motion.div
             className="w-24 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto"
             initial={{ width: 0 }}

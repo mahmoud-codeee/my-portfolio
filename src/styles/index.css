@@ -6,3 +6,29 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* SpotlightCard */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    var(--spotlight-size, 400px) circle at var(--x, -9999px) var(--y, -9999px),
+    var(--spotlight-color, rgba(251, 191, 36, 0.12)),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}

@@ -1,5 +1,6 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useState } from "react";
+import SpotlightCard from "../components/reactbits/SpotlightCard";
 
 const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -181,6 +182,10 @@ const ProjectCard = ({
   };
 
   return (
+    <SpotlightCard
+      spotlightColor={`rgba(${project.color.includes("amber") ? "251,191,36" : project.color.includes("purple") ? "168,85,247" : "59,130,246"}, 0.15)`}
+      className="rounded-2xl"
+    >
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -270,6 +275,7 @@ const ProjectCard = ({
         className={`absolute -inset-1 bg-gradient-to-r ${project.color} opacity-0 group-hover:opacity-20 blur-xl -z-10 transition-opacity duration-500`}
       />
     </motion.div>
+    </SpotlightCard>
   );
 };
 
