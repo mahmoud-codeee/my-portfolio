@@ -1,4 +1,4 @@
-<![CDATA[<div align="center">
+<div align="center">
 
 # 🌐 Mahmoud Saad — Personal Portfolio
 
@@ -150,22 +150,21 @@ This project uses **GitHub Pages served from the `docs/` folder** on the `main` 
 ### Full deploy (source + build changes)
 
 ```powershell
-# 1. Edit source files in your working folder
-# 2. Copy updated src/ into the git repo
+# 1. Copy updated src/ into the git repo
 Copy-Item -Recurse -Force "path\to\src" "path\to\repo\"
 
-# 3. Build
+# 2. Build
 cd path\to\repo
 npm run build
 
-# 4. Replace docs/assets with new build output
+# 3. Replace docs/assets with new build output
 Remove-Item -Recurse -Force docs\assets
 Copy-Item -Recurse dist\* docs\ -Force
 
-# 5. Stage only the right folders
+# 4. Stage only the right folders (never git add -A)
 git add src/ docs/ public/
 
-# 6. Commit and push
+# 5. Commit and push
 git commit -m "your message"
 git push
 ```
@@ -173,14 +172,13 @@ git push
 ### CV-only update (no rebuild needed)
 
 ```powershell
-# Just copy the new PDF directly into docs/ and push
 Copy-Item "path\to\New CV.pdf" "docs\Mahmoud_Saad_Frontend_Developer_CV.pdf"
 git add docs/Mahmoud_Saad_Frontend_Developer_CV.pdf
 git commit -m "chore: update CV"
 git push
 ```
 
-> ⚠️ **Never run `git add -A` or `git add .`** — this will stage `node_modules/` and `dist/`. Always use explicit paths: `git add src/ docs/ public/`.
+> ⚠️ **Never run `git add -A` or `git add .`** — this stages `node_modules/` and `dist/`. Always use explicit paths.
 
 ---
 
@@ -194,12 +192,12 @@ export default defineConfig({
 });
 ```
 
-**CV link in `Hero.tsx`** uses `import.meta.env.BASE_URL` so it resolves correctly in both dev and production:
+**CV link in `Hero.tsx`** — uses `import.meta.env.BASE_URL` to resolve correctly in dev and production:
 ```tsx
 href={`${import.meta.env.BASE_URL}Mahmoud_Saad_Frontend_Developer_CV.pdf`}
 ```
 
-**Certificate images** in `Certificates.tsx` also use `BASE_URL`:
+**Certificate images in `Certificates.tsx`** — same pattern:
 ```tsx
 src={`${import.meta.env.BASE_URL}${cert.image}`}
 ```
@@ -222,4 +220,3 @@ Muscat College × UMPSA · Muscat, Oman
 <div align="center">
   <sub>Built with React, TypeScript, and way too much Framer Motion. © 2025 Mahmoud Saad Mokhtar</sub>
 </div>
-]]>
