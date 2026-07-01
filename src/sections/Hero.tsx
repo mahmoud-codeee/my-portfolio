@@ -168,7 +168,7 @@ const Hero = () => {
           </motion.a>
 
           <motion.a
-            href="/Mahmoud_Saad_CV.pdf"
+            href={`${import.meta.env.BASE_URL}Mahmoud_Saad_Frontend_Developer_CV.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-amber-400 to-orange-500 text-black font-semibold rounded-full"

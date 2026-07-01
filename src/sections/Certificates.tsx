@@ -6,13 +6,13 @@ const certificates = [
     title: "Git & GitHub Basics",
     issuer: "School Learning Platform",
     date: "2025",
-    image: "/git-github.jpg",
+    image: "git-github.jpg",
   },
   {
     title: "Graduation Ceremony & Award",
     issuer: " University of Malaysia Pahang Al-Sultan Abdullah (UMPSA)",
     date: "2025",
-    image: "/grad-1.jpeg",
+    image: "grad-1.jpeg",
     description:
       "I celebrated my graduation at a formal ceremony in Oman, wearing traditional Omani regalia, proudly holding my trophy and certificate..",
   },
@@ -20,25 +20,25 @@ const certificates = [
     title: "RPA Academy",
     issuer: "INTRO Technology",
     date: "December 2025",
-    image: "/RPA.png",
+    image: "RPA.png",
   },
   {
     title: "UiPath Academy - 1",
     issuer: "UiPath Academy",
     date: "November 2025",
-    image: "/UiPath-1.png",
+    image: "UiPath-1.png",
   },
   {
     title: "UiPath Academy - 2",
     issuer: "UiPath Academy",
     date: "November 2025",
-    image: "/UiPath-2.png",
+    image: "UiPath-2.png",
   },
   {
     title: "Dean's Honour List Award & Certificate",
     issuer: "Muscat College - Department of Computing",
     date: "2024/2025 Academic Year",
-    image: "/grad-2.jpeg",
+    image: "grad-2.jpeg",
     description:
       "I received this award for making the Dean's Honour List during the 27th Graduation Ceremony at Muscat College.",
   },
@@ -46,7 +46,7 @@ const certificates = [
     title: "Graduation Celebration",
     issuer: "Muscat College",
     date: "2024/2025 Academic Year",
-    image: "/grad-3.jpeg",
+    image: "grad-3.jpeg",
     description: "Celebrating my graduation.",
   },
 ];
@@ -99,7 +99,7 @@ const Certificates = () => {
                 <div className="relative mb-6 h-48 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden">
                   {cert.image ? (
                     <img
-                      src={cert.image}
+                      src={`${import.meta.env.BASE_URL}${cert.image}`}
                       alt={`${cert.title} certificate`}
                       className="w-full h-full object-contain rounded-xl"
                       loading="lazy"
@@ -182,7 +182,7 @@ const Certificates = () => {
               {/* Large Image */}
               {certificates[activeCert].image ? (
                 <img
-                  src={certificates[activeCert].image}
+                  src={`${import.meta.env.BASE_URL}${certificates[activeCert].image}`}
                   alt={`${certificates[activeCert].title} certificate large view`}
                   className="h-[400px] w-full object-contain rounded-xl mb-6"
                   loading="lazy"

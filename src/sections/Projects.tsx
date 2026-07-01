@@ -8,18 +8,18 @@ const Projects = () => {
     {
       title: "TypeRush",
       description:
-        "A real-time typing speed test built in React — featuring live WPM/accuracy calculations, custom sound effects via the Web Audio API, animated UI with Framer Motion, and seamless mobile keyboard support. Shipped to GitHub Pages with zero dependencies on audio libraries.",
-      tags: ["React", "Tailwind CSS", "Framer Motion", "Vite", "Web Audio API"],
-      color: "from-emerald-500 to-teal-500",
+        "A real-time typing speed test app with live WPM tracking, accuracy scoring, and dynamic text challenges — built for a smooth, responsive experience.",
+      tags: ["React", "TypeScript", "Tailwind CSS"],
+      color: "from-amber-500 to-orange-500",
       live: "https://mahmoud-codeee.github.io/typerush/",
       github: "https://github.com/mahmoud-codeee/typerush",
     },
     {
       title: "Personal Portfolio",
       description:
-        "A modern, fully responsive portfolio website built with React, TypeScript, Vite, and Tailwind CSS. Features animated UI with Framer Motion, smooth scroll sections, and a clean black & gold design aesthetic.",
-      tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
-      color: "from-amber-500 to-orange-500",
+        "This portfolio — a modern, animated website built with React, TypeScript, and Framer Motion. Dark theme, smooth transitions, fully responsive.",
+      tags: ["React", "TypeScript", "Framer Motion", "Tailwind CSS"],
+      color: "from-purple-500 to-pink-500",
       live: "https://mahmoud-codeee.github.io/my-portfolio/",
       github: "https://github.com/mahmoud-codeee/my-portfolio",
     },
@@ -31,24 +31,6 @@ const Projects = () => {
       color: "from-blue-500 to-cyan-500",
       live: "https://mahmoud-codeee.github.io/task-manager-soft-ui/",
       github: "https://github.com/mahmoud-codeee/task-manager-soft-ui",
-    },
-    {
-      title: "Pig Game",
-      description:
-        "An engaging dice game featuring dynamic DOM manipulation, game state management, and smooth animations. Built to demonstrate interactive JavaScript capabilities.",
-      tags: ["HTML", "CSS", "JavaScript"],
-      color: "from-purple-500 to-pink-500",
-      live: "https://mahmoud-codeee.github.io/pig-game/",
-      github: "https://github.com/mahmoud-codeee/pig-game",
-    },
-    {
-      title: "Guess My Number",
-      description:
-        "Interactive number guessing game with score tracking, high score persistence, and real-time feedback mechanisms.",
-      tags: ["HTML", "CSS", "JavaScript"],
-      color: "from-rose-500 to-red-500",
-      live: "https://mahmoud-codeee.github.io/guess-my-number/",
-      github: "https://github.com/mahmoud-codeee/guess-my-number",
     },
   ];
 
@@ -172,12 +154,12 @@ const ProjectCard = ({
   const rotateX = useTransform(
     mouseYSpring,
     [-0.5, 0.5],
-    ["7.5deg", "-7.5deg"]
+    ["7.5deg", "-7.5deg"],
   );
   const rotateY = useTransform(
     mouseXSpring,
     [-0.5, 0.5],
-    ["-7.5deg", "7.5deg"]
+    ["-7.5deg", "7.5deg"],
   );
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {

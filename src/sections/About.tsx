@@ -12,16 +12,16 @@ const About = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
 
   const skills = [
-    "HTML5",
-    "CSS3",
-    "JavaScript (ES6+)",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "Framer Motion",
-    "Git & GitHub",
-    "Vite",
-    "MySQL",
+    { name: "HTML5", icon: "🌐" },
+    { name: "CSS3", icon: "🎨" },
+    { name: "JavaScript", icon: "⚡" },
+    { name: "React", icon: "⚛️" },
+    { name: "TypeScript", icon: "📘" },
+    { name: "Tailwind CSS", icon: "💨" },
+    { name: "Framer Motion", icon: "🎭" },
+    { name: "Git & GitHub", icon: "🔗" },
+    { name: "Vite", icon: "🔥" },
+    { name: "MySQL", icon: "🗄️" },
   ];
 
   const achievements = [
@@ -114,21 +114,22 @@ const About = () => {
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-6">
               I'm a{" "}
               <span className="text-amber-400 font-semibold">
-                front-end developer
+                Front-End Developer
               </span>{" "}
-              and recent{" "}
+              and{" "}
               <span className="text-amber-400 font-semibold">
                 Software Engineering graduate
               </span>{" "}
-              from Muscat College, affiliated with the University of Malaysia
-              Pahang Al-Sultan Abdullah (UMPSA).
+              from Muscat College (UMPSA), based in Muscat, Oman — ranked 1st
+              in my cohort with a 3.9/4.0 GPA.
             </p>
             <p className="text-lg text-white/70 leading-relaxed">
-              With a strong foundation in web development and a passion for
-              building clean, responsive, and user-friendly interfaces, I
-              transform ideas into interactive digital experiences. My journey
-              is driven by curiosity, discipline, and a commitment to continuous
-              learning.
+              I specialise in building polished, performant web interfaces using
+              React, TypeScript, and Tailwind CSS. I care deeply about clean
+              architecture, smooth user experiences, and writing code that
+              scales. My drive comes from curiosity — I'm always learning,
+              whether that's mastering a new framework or refining pixel-perfect
+              designs.
             </p>
           </div>
         </motion.div>
@@ -176,22 +177,24 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-3xl font-bold text-center mb-8 text-white">
+          <h3 className="text-3xl font-bold text-center mb-10 text-white">
             Tech Stack
           </h3>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {skills.map((skill, i) => (
               <motion.div
-                key={skill}
-                className="px-6 py-3 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-white/90 hover:bg-gradient-to-r hover:from-amber-400 hover:to-orange-500 hover:text-black hover:border-transparent transition-all cursor-default"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                key={skill.name}
+                className="group flex flex-col items-center gap-3 p-5 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl hover:border-amber-400/50 hover:bg-white/10 transition-all cursor-default"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
-                whileHover={{ scale: 1.1, rotate: 2 }}
-                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.4, delay: i * 0.06 }}
+                whileHover={{ y: -4, scale: 1.03 }}
               >
-                {skill}
+                <span className="text-3xl">{skill.icon}</span>
+                <span className="text-sm font-medium text-white/80 group-hover:text-amber-400 transition-colors text-center leading-tight">
+                  {skill.name}
+                </span>
               </motion.div>
             ))}
           </div>
