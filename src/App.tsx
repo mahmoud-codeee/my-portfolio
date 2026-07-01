@@ -5,10 +5,12 @@ import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
 import Certificates from "./sections/Certificates";
+import ScrollUI from "./components/ScrollUI";
 
 export default function App() {
   return (
     <main className="bg-black text-white">
+      <ScrollUI />
       <Navbar />
       <Hero />
       <About />
